@@ -14,4 +14,4 @@ To grab dependencies run `yarn` and then use `yarn run sreach` to start an expre
 
 ## Demo
 
-Demo can be found here.
+Demo can be found [here](https://tyson-skiba.github.io/Salavage-Yard-Aggregator/).
