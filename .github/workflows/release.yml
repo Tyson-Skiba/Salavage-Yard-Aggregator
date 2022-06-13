@@ -21,11 +21,18 @@ jobs:
         run: | 
           yarn
 
-      - name: Deploy
+      - name: Create assets
         run: |
           yarn search --print
+          cp dist/results.html dist/index.html
         env:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           github_token: ${{ secrets.GH_TOKEN }}
           repository: ${{ github.repository }}     
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./dist
