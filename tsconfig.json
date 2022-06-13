@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "module": "CommonJS",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "skipLibCheck": true,
+      "outDir": "./dist",
+      "lib": [ "ES5", "ES2019", "DOM" ],
+      "target": "ES2019",
+      "sourceMap": true
+    },
+    "files": [
+        "src/search.ts"
+    ]
+}
