@@ -1,0 +1,14 @@
+<h1>Results</h1>
+<p>{{foo}}</p>
+<ul class="grid grid-cols-1 md:grid-cols-6 md:gap-4 mx-4">
+  {{#each search_result}}
+    <li class="mb-4 md:mb-0 col-span-1">{{{print_card this}}}</li>
+  {{/each}}
+</ul>
+
+<script>
+  window.onload = function() {
+    // window.__debug_state = {{{json @exphbs}}};
+    window.__debug_data = {{{json search_result}}};
+  };
+</script>
